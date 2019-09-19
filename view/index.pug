@@ -1,14 +1,19 @@
-center
-    h1 Welcome to 
-    h1=name_of_province
-    div 
-         img(src= images[0]) 
-    div 
-        h1 Delicacies
-        ul 
-            li=delicacies[0]
-            li=delicacies[1]
-            li=delicacies[2]
-         
-    h1=groupOfIsland
-    h1=population
+html
+    head
+    block styles
+        link(rel="stylesheet" type="text/css" href="/style.css")
+        link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css")
+    body
+        center
+            h1 Welcome to the
+            h1=obj.name
+            div 
+                img(src=img1) 
+            div 
+                h1 Delicacies
+                ul 
+                    for element in obj.delicacies
+                        li=element
+
+            h1=obj.group
+            h1=obj.population
